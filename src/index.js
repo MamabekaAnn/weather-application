@@ -22,6 +22,38 @@ function formatDate(date) {
   let hours = date.getHours();
   let day = date.getDay();
 
+  function updateDateTime() {
+    const currentDate = new Date();
+    const dateOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    const timeOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+
+    const formattedDate = currentDate.toLocaleDateString(
+      undefined,
+      dateOptions
+    );
+    const formattedTime = currentDate.toLocaleTimeString(
+      undefined,
+      timeOptions
+    );
+
+    document.getElementById("current-date").innerText = formattedDate;
+    document.getElementById("current-time").innerText = formattedTime;
+  }
+
+  updateDateTime(); // Initial call to set the date and time immediately
+
+  // Update the date and time every second
+  setInterval(updateDateTime, 1000);
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -37,7 +69,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   let formattedDay = days[day];

@@ -133,6 +133,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentDate = new Date();
   currentDateElement.innerHTML = formatDate(currentDate);
 
-  // Fetch weather for the default city on load
   fetchWeather("Johannesburg");
 });

@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
   background: #f9f7fe;
   font-family: "Roboto", sans-serif;
@@ -93,6 +94,53 @@ footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
   padding-top: 15px;
-
   color: rgba(39, 33, 66, 0.4);
+}
+
+@media screen and (max-width: 600px) {
+  .weather-app {
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-button {
+    margin-left: 0;
+  }
+
+  .current-temperature {
+    font-size: 36px;
+  }
+
+  .current-city {
+    font-size: 28px;
+  }
+
+  .current-details {
+    font-size: 14px;
+  }
+
+  .current-temperature-value {
+    font-size: 60px;
+  }
+
+  .current-temperature-unit {
+    font-size: 24px;
+    top: -28px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .weather-app {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .weather-app {
+    max-width: 600px;
+  }
 }

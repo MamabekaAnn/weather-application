@@ -135,3 +135,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fetchWeather("Johannesburg");
 });
+ChatGPT;
